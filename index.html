@@ -76,9 +76,6 @@
             <a class="nav-link js-scroll-trigger" href="#Certificates">Certificates</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="pages/waph.html">Web Application Programming and Hacking</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#requirements">Projects</a>
           </li>
         </ul>
@@ -147,26 +144,6 @@
 	          fetchNewJoke();
 	          setInterval(fetchNewJoke, 60000);
             </script>
-            <!-- Today's Weather -->
-            <br>
-            <li>
-              <h5 class="mb-0">Cincinnati Weather</h5>
-              <div id="Weather"></div>
-              <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-              <script>
-                  $.get("https://api.weatherbit.io/v2.0/current?key=5d55d3bd2a3844f0a658a05b4d977cee&postal_code=45220&country=US", function (result) {
-                      if (result && result.data[0]) {
-                          var weatherDescription = result.data[0].weather.description;
-                          var iconCode = result.data[0].weather.icon;
-                          var weatherIcon = "<img src='https://www.weatherbit.io/static/img/icons/" + iconCode + ".png' alt='" + weatherDescription + "' style='width: 25px;'>";
-                          var temperature = result.data[0].temp;
-                          $("#Weather").html(weatherDescription + " " + weatherIcon + ", Temp: " + temperature + "°C");
-                      } else {
-                          $("#Weather").text("Could not retrieve weather information at this time");
-                      }
-                  });
-              </script>
-            </li>
           </ul>
         </div>
       </section>
