@@ -362,62 +362,6 @@
             <!-- Git url -->
             Repository URL: <a href="https://github.com/pullasj"> https://github.com/pullasj</a>
             <br>
-            <br>
-              <h3 class="mb-0">Small live projects</h5>
-              <!-- React -->
-              <div id="root"></div>
-              <!-- React Script -->
-              <script src="js/main.edf8ac75.js"></script>
-              <script>
-                // Get a reference to the root div
-                const rootElement = document.getElementById('root');
-
-                // Render your React component inside the root div
-                ReactDOM.render(React.createElement(DigitalClock), rootElement);
-              </script>
-              </li>
-              <li>
-              <!-- dital clock -->
-              <h5 class="mb-0">JavaScript digital clock:</h5>
-                <div id="digit-clock"></div>
-                <script>
-                  function displayTime() {
-                    document.getElementById('digit-clock').innerHTML="current time :"+ new Date();
-
-                  }
-                  setInterval(displayTime,500);
-                </script>
-            </li>
-            <br>
-
-            <!-- Analog clock -->
-          <li>
-            <h5 class="mb-0">Analog clock:</h5>
-            <canvas id="analog-clock" width="150" height="150" style="background-color:#999"></canvas>
-          </li>
-          <script src="https://waph-uc.github.io/clock.js"></script>
-          <script>
-            // Analog Clock
-            var canvas= document.getElementById("analog-clock");
-            var ctx=canvas.getContext("2d");
-            var radius= canvas.height /2;
-            ctx.translate(radius, radius);
-            radius=radius * 0.90;
-            setInterval(drawClock, 1000);
-            function drawClock(){
-              drawFace(ctx, radius);
-              drawNumbers(ctx, radius);
-              drawTime(ctx, radius);
-            }
-          </script>
-          <br>
-          <!-- Show date -->
-          <li>
-            <h5 class="mb-0">Date:</h5>
-            <div id="date" onclick="document.getElementById('date').innerText=Date()">Click here to show date</div>
-          </li>
-        </ul>
-        </div>
 
       </section>
 
